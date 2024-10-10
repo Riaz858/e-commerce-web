@@ -24,7 +24,7 @@ const Hero = () => {
 
       <div className="relative left-3">
         <Image
-          src={require('../../../public/images/smart-watch.png')}
+          src='/images/smart-watch.png'
           alt="Hero Image"
           width={500}
           height={500}
