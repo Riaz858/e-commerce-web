@@ -4,9 +4,9 @@ import { FiPhoneCall } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="pl-6  bg-[#008fcc] text-gray-200">
+    <footer className="pl-6  bg-[#008fcc] text-gray-200 select-none">
       <div className="py-16 pr-20 grid grid-cols-1 md:grid-cols-3">
-        {/* <div className="mt-11 ml-11"> */}
+        
         <div className=" ml-11">
           <h1 className=" text-4xl font-semibold pb-6">MegaMart</h1>
           <p className="font-bold text-lg pb-3">Contact Us</p>

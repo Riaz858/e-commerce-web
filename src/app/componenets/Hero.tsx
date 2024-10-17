@@ -15,7 +15,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative mx-6 my-8 bg-[#222945] rounded-xl flex items-center justify-between p-8">
+    <section className="relative mx-6 my-8 bg-[#222945] rounded-xl flex items-center justify-between p-8 select-none">
       <div className="text-white ml-24">
         <h3 className="text-xl font-medium uppercase mb-2">Best Deal Online on Smart Watches</h3>
         <h1 className="text-6xl font-bold">SMART WEARABLE</h1>

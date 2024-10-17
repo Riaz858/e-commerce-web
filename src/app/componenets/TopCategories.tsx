@@ -11,7 +11,7 @@ export default function TopCategories() {
     ];
   
     return (
-      <div className="py-10">
+      <div className="py-10 select-none">
         <div className="flex justify-between items-center px-4">
           <h2 className="text-xl font-semibold">Shop From <span className="text-[#008fcc]">Top Categories</span></h2>
           <a href="#" className="text-[#008fcc]">View All &rarr;</a>
