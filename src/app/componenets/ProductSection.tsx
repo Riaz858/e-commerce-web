@@ -54,7 +54,7 @@ export default function ProductSection() {
   ];
 
   return (
-    <div className="py-8 px-4 select-none">
+    <div className="py-12 px-8 select-none">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">
           Grab the best deal on{" "}
@@ -64,8 +64,9 @@ export default function ProductSection() {
           <span className="text-gray-900">View All</span>
         </Link>
       </div>
+      <div className="border bottom-1 mt-6"></div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 py-9 ">
         {products.map((product, index) => (
           <div
             key={index}
