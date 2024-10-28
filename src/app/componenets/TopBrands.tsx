@@ -1,28 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IoIosArrowForward } from "react-icons/io";
 
 const TopBrands = () => {
-  const brands = [
+  interface TopBr {
+    name: string;
+    textColor: string;
+    textBgColor: string;
+    boxBgColor: string;
+    imgSrc: string;
+    logo: string;
+    save: string;
+    logoWidth: string;
+    circleColor: string;
+    circleLineColor: string;
+  };
+  const brands: TopBr[] = [
     {
       name: "IPHONE",
       textColor: "text-yellow-50",
       textBgColor: "bg-[#404040]",
       boxBgColor: "bg-[#303030]",
       imgSrc: "/brands/apple14.png",
-      logo: "/brands/apple-logo.jpg",
+      logo: "/brands/apple-logo1.png",
       save: "text-white pt-7",
-      logoWidth: "w-24 h-12 mt-12 pr-10 rounded-full",
+      logoWidth: "w-24 h-12 mt-12 pr-10",
+      circleColor: "bg-[#404040]",
+      circleLineColor: "border-[#404040]",
     },
     {
       name: "REALME",
       textColor: "text-gray-800",
       textBgColor: "bg-[#f5dd8e]",
       boxBgColor: "bg-[#fff3cc]",
-      imgSrc: "/brands/realme.png",
+      imgSrc: "/brands/narzo-50.png",
       logo: "/brands/realme-logo.png ",
       save: "text-black pb-2",
-      logoWidth: "w-32 h-34 mt-5",
-      
+      logoWidth: " mt-4",
+      circleColor: "bg-[#f5dc8c]",
+      circleLineColor: "border-[#f5dc8c]",
     },
     {
       name: "XIAOMI",
@@ -31,8 +47,10 @@ const TopBrands = () => {
       boxBgColor: "bg-[#ffebde]",
       imgSrc: "/brands/xiaomi11i.png",
       logo: "/brands/xiomi-logo.png",
-      save: "text-black pt-7",
+      save: "text-black pt-9",
       logoWidth: "w-18 h-16 mt-7",
+      circleColor: "bg-[#f7cbab]",
+      circleLineColor: "border-[#f7cbab]",
     },
   ];
 
@@ -42,8 +60,8 @@ const TopBrands = () => {
         <h2 className="text-2xl font-bold">
           Top <span className="text-[#008fcc]">Electronic Brands</span>
         </h2>
-        <Link href="#">
-          <span className="text-[#008fcc] items-center">View All &rarr;</span>
+        <Link href="#" className="flex items-center font-semibold">View All
+          <span className="ml-2 mt-[2px]"><IoIosArrowForward/></span>
         </Link>
       </div>
 
@@ -51,13 +69,19 @@ const TopBrands = () => {
         {brands.map((brand, index) => (
           <div
             key={index}
-            className={`relative w-96 h-48 p-6 rounded-xl shadow-lg text-white  ${brand.boxBgColor}`}
+            className={`relative w-96 h-52 p-6 rounded-xl shadow-2xl text-white  ${brand.boxBgColor} overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105`}
           >
             <div
-              className={`absolute top-6  bg-white text-black px-3 py-1 rounded-md text-sm font-bold ${brand.textColor} ${brand.textBgColor} `}
+              className={`absolute -top-28 -right-[68px] w-64 h-64 rounded-full ${brand.circleColor}`}
+            ></div>
+            <div className={`absolute -top-[130px] -right-[86px] border-[1.5px] w-72 h-72 rounded-full ${brand.circleLineColor} `}></div>
+
+            <div
+              className={`absolute top-5 px-3 py-1 rounded-md text-sm font-bold ${brand.textColor} ${brand.textBgColor} `}
             >
               {brand.name}
             </div>
+
             <div className={`object-contain ${brand.logoWidth}`}>
               <Image
                 src={brand.logo}
@@ -69,11 +93,11 @@ const TopBrands = () => {
             <img
               src={brand.imgSrc}
               alt={brand.name}
-              height={100}
-              width={100}
-              className="absolute bottom-1 ml-24 w-full h-40 gap-4 object-contain mb-4 "
+              height={135}
+              width={135}
+              className="absolute left-56 bottom-2 object-contain transition-transform duration-300 ease-in-out hover:scale-110 "
             />
-            <p className={` text-lg font-semibold ${brand.save}`}>
+            <p className={`text-lg font-semibold ${brand.save}`}>
               UP TO 80% OFF
             </p>
           </div>

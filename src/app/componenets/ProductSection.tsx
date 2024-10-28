@@ -1,50 +1,58 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const products = [
-  {
-    name: "Galaxy S22 Ultra",
-    price: "Rs.115999",
-    oldPrice: "Rs.25999",
-    discount: "56% OFF",
-    save: "Rs.32999",
-    img: "/images/s22-ultra.webp",
-  },
-  {
-    name: "Galaxy M13 (4GB | 64 GB)",
-    price: "Rs.10499",
-    oldPrice: "Rs.14999",
-    discount: "56% OFF",
-    save: "Rs.4500",
-    img: "/images/M13.jpg",
-  },
-  {
-    name: "Galaxy M33 (4GB | 64 GB)",
-    price: "Rs.11499",
-    oldPrice: "Rs.14999",
-    discount: "56% OFF",
-    save: "Rs.4500",
-    img: "/images/sm33.webp",
-  },
-  {
-    name: "Galaxy A53 (4GB | 64 GB)",
-    price: "Rs.16499",
-    oldPrice: "Rs.20999",
-    discount: "56% OFF",
-    save: "Rs.4500",
-    img: "/images/53.jpg",
-  },
-  {
-    name: "Galaxy S22 (4GB | 64 GB)",
-    price: "Rs.22499",
-    oldPrice: "Rs.30999",
-    discount: "56% OFF",
-    save: "Rs.4500",
-    img: "/images/s22.png",
-  },
-];
-
+interface Products {
+  name: string;
+  price: string;
+  oldPrice: string;
+  discount: string;
+  save: string;
+  img: string;
+}
 export default function ProductSection() {
+  const products: Products[] = [
+    {
+      name: "Galaxy S22 Ultra",
+      price: "Rs.115999",
+      oldPrice: "Rs.25999",
+      discount: "56% OFF",
+      save: "Rs.32999",
+      img: "/images/s22-ultra.webp",
+    },
+    {
+      name: "Galaxy M13 (4GB | 64 GB)",
+      price: "Rs.10499",
+      oldPrice: "Rs.14999",
+      discount: "56% OFF",
+      save: "Rs.4500",
+      img: "/images/M13.jpg",
+    },
+    {
+      name: "Galaxy M33 (4GB | 64 GB)",
+      price: "Rs.11499",
+      oldPrice: "Rs.14999",
+      discount: "56% OFF",
+      save: "Rs.4500",
+      img: "/images/sm33.webp",
+    },
+    {
+      name: "Galaxy A53 (4GB | 64 GB)",
+      price: "Rs.16499",
+      oldPrice: "Rs.20999",
+      discount: "56% OFF",
+      save: "Rs.4500",
+      img: "/images/53.jpg",
+    },
+    {
+      name: "Galaxy S22 (4GB | 64 GB)",
+      price: "Rs.22499",
+      oldPrice: "Rs.30999",
+      discount: "56% OFF",
+      save: "Rs.4500",
+      img: "/images/s22.png",
+    },
+  ];
+
   return (
     <div className="py-8 px-4 select-none">
       <div className="flex justify-between items-center mb-4">
@@ -69,7 +77,7 @@ export default function ProductSection() {
               width={300}
               height={200}
               loading="lazy"
-              className="w-full h-40 object-cover mb-4 transition-transform duration-300 ease-in-out group-hover:scale-110"
+              className="w-full h-40 object-contain mb-4 transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
 
             <div className="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
@@ -85,10 +93,9 @@ export default function ProductSection() {
             </p>
             <div className="border-b-[1px] bg-black mt-2"></div>
             <p className="text-green-500">Save - {product.save}</p>
-            {/* <div key={index} className="border-b-4 bg-black"></div> */}
-            <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#008fcc] transition-all duration-300 group-hover:w-full mt-8" ></span>
+
+            <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#008fcc] transition-all duration-300 group-hover:w-full mt-8"></span>
           </div>
-          
         ))}
       </div>
     </div>

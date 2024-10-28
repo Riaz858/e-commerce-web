@@ -74,7 +74,6 @@ const Header = () => {
           </div>
           <div className="border-l-[1px] border-gray-400 h-6 mr-7"></div>
 
-
           <div className="flex items-center text-lg font-medium ">
             <span className="text-[#008fcc] mr-1">
               <IoCartOutline />
@@ -82,29 +81,65 @@ const Header = () => {
             <p>Cart</p>
           </div>
         </div>
-
       </div>
-        <div className="border-b-[1px] border-gray-300 w-full shadow-2xl"></div>
+      <div className="border-b-[1px] border-gray-300 w-full shadow-2xl"></div>
       {/*Category Bar      ==========================================================>>>>>>>>>>>>>>>> */}
       <div className="px-6 py-4">
         <div className="flex justify-between ">
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Groceries</Link>
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Premium Fruits</Link>
-          
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Home & Kitchen</Link>
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Fashion</Link>
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Electronic</Link>
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Groceries
+          </Link>
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Premium Fruits
+          </Link>
 
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Beauty</Link>
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Home Improvement</Link>
-          <Link href='#' className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700">Sports, Toys & Luggage</Link>
-          
-          
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Home & Kitchen
+          </Link>
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Fashion
+          </Link>
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Electronic
+          </Link>
+
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Beauty
+          </Link>
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Home Improvement
+          </Link>
+          <Link
+            href="#"
+            className="py-[5px] px-4 font-medium hover:bg-[#008fcc] hover:text-white rounded-full bg-blue-50 text-gray-700"
+          >
+            Sports, Toys & Luggage
+          </Link>
         </div>
       </div>
       <div className="border-b-[1px] border-gray-300 w-full shadow-2xl"></div>
-      </header> 
-    
+    </header>
   );
 };
 
